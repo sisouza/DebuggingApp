@@ -6,6 +6,18 @@ import android.util.Log
 
 private const val TAG = "MainActivity"
 
+/*The result of dividing the numerator by the denominator five times.
+Each time the code in the repeat block runs, the value of the denominator is decreased by one. On the fifth and final iteration,
+the app attempts to divide by zero.*/
+fun division() {
+    val numerator = 60
+    var denominator = 4
+    repeat(5) {
+        Log.v(TAG, "${numerator / denominator}")
+        denominator--
+    }
+}
+
 fun logging() {
     fun logging() {
         Log.e("ErrorTag", "ERROR: a serious error like an app crash")
@@ -22,5 +34,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         logging()
+        division()
     }
 }
