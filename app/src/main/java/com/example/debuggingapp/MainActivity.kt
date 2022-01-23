@@ -8,11 +8,11 @@ private const val TAG = "MainActivity"
 
 fun logging() {
     fun logging() {
-        Log.e(TAG, "ERROR: a serious error like an app crash")
-        Log.w(TAG, "WARN: warns about the potential for serious errors")
-        Log.i(TAG, "INFO: reporting technical information, such as an operation succeeding")
-        Log.d(TAG, "DEBUG: reporting technical information useful for debugging")
-        Log.v(TAG, "VERBOSE: more verbose than DEBUG logs")
+        Log.e("ErrorTag", "ERROR: a serious error like an app crash")
+        Log.w("WarnTag", "WARN: warns about the potential for serious errors")
+        Log.i("InfoTag", "INFO: reporting technical information, such as an operation succeeding")
+        Log.d("DebugTag", "DEBUG: reporting technical information useful for debugging")
+        Log.v("VerboseTag", "VERBOSE: more verbose than DEBUG logs")
     }
 
 }
