@@ -3,6 +3,7 @@ package com.example.debuggingapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 
 private const val TAG = "MainActivity"
 
@@ -12,9 +13,8 @@ the app attempts to divide by zero.*/
 fun division() {
     val numerator = 60
     var denominator = 4
-    repeat(5) {
+    repeat(4) {
         Log.d("denominator", "$denominator")
-
         Log.v(TAG, "${numerator / denominator}")
         denominator--
     }
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //findViewById<TextView>(R.id.tvDivision).setText("${numerator / denominator}")
         logging()
         division()
     }
